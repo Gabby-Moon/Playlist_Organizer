@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Song Information</title>
+    <link rel ="stylesheet" href ="./public/styles.css">
+</head>
+<body>
+    <h1>Song Information</h1>
+
+    <fieldset>
+        <lable>Title:
+            <input type="text" name="title">
+        </lable>
+
+        <label>Artist:
+            <input type="text" name ="artist">
+        </label>
+    
+
+        <div  id ="options">
+            <select name ="genre" id="genre">
+                <option value="none">---Select a Genre---</option>
+                <option value="pop">Pop</option>
+                <option value="r&b">R&B</option>
+                <option value="lo-fi">Lo-fi</option>
+                <option value="rock">Rock</option>
+                <option value="edm">EDM</option>
+                <option value="blues">Blues</option>
+                <option value="country">Country</option>
+            </select>
+
+
+            <select name=" playlist" id="playlist">
+                <option value="none">---Select a Playlist---</option>
+                <option value="general">General</option>
+                <option value="workout">Workout</option>
+                <option value="study">Study</option>
+                <option value="happy">Happy</option>
+                <option value="sad">Sad</option>
+                <option value="romantic">Romantic</option>
+            </select>
+        </div>
+
+
+
+    </fieldset>
+
+      <!--  button for  -->
+    <button type="submit">Add Song</button>
+
+    <a href="playlists.ejs" class="button-class">Show Playlists</a>
+
+
+
+    
+    
+</body>
+</html>
