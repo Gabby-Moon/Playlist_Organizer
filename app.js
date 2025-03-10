@@ -21,18 +21,23 @@ app.get('/', (req, res) => {
     res.render('home' );
 });
 app.post('/thankyou', (req,res)=>{
-    //get playlist from the form
-    const playlist=req.body;
+    //get newSong from the form
+    const newSong = {
+        title: req.body.title,
+        artist: req.body.artist,
+        genre: req.body.genre,
+        playlist: req.body.playlist
+    };
 
-    const result =validateForm(playlist);
+    const result =validateForm(newSong);
     if(!result.isValid){
         res.send(result.errors);
         return;
     }
-    res.render('thankyou');
+    res.render('thankyou', { newSong });
 });
 
-app.get('/admin', (req,res)=>{
+app.get('/playlists', (req,res)=>{
     res.render('playlists');
 });
 
