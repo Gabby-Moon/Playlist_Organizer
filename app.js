@@ -16,6 +16,9 @@ app.use(express.static('public'));
 //Define a port number for our server to listen on
 const PORT = 3000;
 
+//List for all songs in all playlists
+const allSongs = [];
+
 //Define a "default" route for our home page
 app.get('/', (req, res) => {
     res.render('home' );
@@ -34,14 +37,17 @@ app.post('/thankyou', (req,res)=>{
         res.send(result.errors);
         return;
     }
+    allSongs.push(newSong);
     res.render('thankyou', { newSong });
 });
 
 app.get('/playlists', (req,res)=>{
-    res.render('playlists');
+    res.render('playlists', allSongs);
 });
 
-
+app.get('/admin', (req,res)=>{
+    res.send(allSongs);
+})
 
 app.listen(PORT, () => {
     console.log(`Server running http://localhost:${PORT}`);
