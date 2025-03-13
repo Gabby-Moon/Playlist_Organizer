@@ -1,81 +1,105 @@
-/* Global Styles */
+/*  Global Styles - Soft & Cute Theme */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #181818;
-    color: #ffffff;
+    font-family: "Comic Sans MS", "Poppins", cursive;
+    background-color: #ffeef7;
+    color: #5a5a5a;
     margin: 0;
     padding: 0;
     text-align: center;
 }
 
-/* Header */
+/*  Header - Soft Gradient Title */
 h1 {
-    color: #ff4757;
+    color: #f53997;
     margin-top: 20px;
+    font-size: 2.5rem;
+    background: linear-gradient(to right, #ff99cc, #ffccff);
+    padding: 10px;
+    border-radius: 20px;
+    display: inline-block;
+    box-shadow: 0 4px 8px rgba(255, 105, 180, 0.3);
 }
 
-/* Form Styling */
+/*  Form Styling */
 fieldset {
-    background: #222;
+    background: #fff5fa;
     border: none;
-    padding: 20px;
-    border-radius: 10px;
+    padding: 40px;
+    border-radius: 15px;
     width: 50%;
     margin: 20px auto;
-    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 8px rgba(255, 105, 180, 0.3);
 }
 
-/* Labels */
+/* ✨ Labels */
 label {
     display: block;
     font-size: 18px;
     margin-bottom: 10px;
+    font-weight: bold;
 }
 
-/* Input Fields */
+/*  Input Fields */
 input, select {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     margin-bottom: 15px;
-    border-radius: 5px;
-    border: none;
+    border-radius: 10px;
+    border: 2px solid #ff99cc;
     font-size: 16px;
-    background: #333;
-    color: #fff;
+    background: #fff0f6;
+    color: #5a5a5a;
+    outline: none;
+    transition: all 0.3s;
 }
 
-/* Dropdown Menus */
+input:focus, select:focus {
+    border-color: #ff69b4;
+    background: #ffe5ec;
+}
+
+/* 🎶 Dropdown Menus */
 select {
     cursor: pointer;
 }
 
-/* Button Styling */
+/*  Buttons */
 button, .button-class {
-    background: #ff4757;
-    color: #fff;
+    background: linear-gradient(to right, #ff99cc, #ff66b2);
+    color: white;
     padding: 12px 20px;
     font-size: 18px;
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
     cursor: pointer;
     text-decoration: none;
     display: inline-block;
     margin-top: 15px;
-    transition: background 0.3s;
+    box-shadow: 0 4px 6px rgba(255, 105, 180, 0.3);
+    transition: all 0.3s ease;
 }
 
 button:hover, .button-class:hover {
-    background: #e84118;
+    background: linear-gradient(to right, #ff66b2, #ff3385);
+    transform: scale(1.05);
 }
 
-/* Playlist Layout */
+/* 🎧 Playlist Layout */
 #options {
     display: flex;
     justify-content: space-between;
     gap: 10px;
 }
+/* Logo Styling */
+.logo {
+    width: 200px;  
+    height: auto;
+    display: block;
+    margin: 20px auto;
+}
 
-/* Responsive Design */
+
+/*  Responsive Design */
 @media (max-width: 768px) {
     fieldset {
         width: 80%;
