@@ -5,13 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Song Information</title>
     <link rel="stylesheet" href="/styles.css">
-
 </head>
 <body>
-    <h1>Song Information</h1>
+    <header>
+        <img src="/logo/03_13_2025_X-Design .png" alt="Playlist Organizer Logo" class="logo">
+        <h1>Song Information</h1>
+    </header>
+    
+
     <form action="thankyou" method="post" id="playlist-form">
-
-
         <fieldset>
             <label>Title:
                 <input type="text" name="title" id="title">
@@ -19,14 +21,14 @@
             </label>
 
             <label>Artist:
-                <input type="text" name ="artist" id="artist">
+                <input type="text" name="artist" id="artist">
                 <span class="err" id="err-artist">Artist is required</span>
             </label>
         </fieldset>
 
         <fieldset>
             <label>Genre:
-                <select name ="genre" id="genre">
+                <select name="genre" id="genre">
                     <option value="none">---Select a Genre---</option>
                     <option value="pop">Pop</option>
                     <option value="r&b">R&B</option>
@@ -36,37 +38,27 @@
                     <option value="blues">Blues</option>
                     <option value="country">Country</option>
                 </select>
-                <span class="err" id="err-genre">Genere is required</span>
+                <span class="err" id="err-genre">Genre is required</span>
             </label>
 
-               <label>Playlist:
-                    <select name="playlist" id="playlist">
-                        <option value="none">---Select a Playlist---</option>
-                        <option value="general">General</option>
-                        <option value="workout">Workout</option>
-                        <option value="study">Study</option>
-                        <option value="happy">Happy</option>
-                        <option value="sad">Sad</option>
-                        <option value="romantic">Romantic</option>
-                    </select>
-                    <span class="err" id="err-playlist">Playlist is required</span>
-                </label>
-            </div>
-        
-
-
-
+            <label>Playlist:
+                <select name="playlist" id="playlist">
+                    <option value="none">---Select a Playlist---</option>
+                    <option value="general">General</option>
+                    <option value="workout">Workout</option>
+                    <option value="study">Study</option>
+                    <option value="happy">Happy</option>
+                    <option value="sad">Sad</option>
+                    <option value="romantic">Romantic</option>
+                </select>
+                <span class="err" id="err-playlist">Playlist is required</span>
+            </label>
         </fieldset>
 
-        <!--  button for  -->
         <button type="submit">Add Song</button>
-
-    <a href="playlists.ejs" class="button-class">Show Playlists</a>
-
-
-
+        <a href="/playlists" class="button-class">Show Playlists</a>
     </form>
-    
-    
+
+    <script src="/scripts/client-validation.js" defer></script>
 </body>
 </html>
