@@ -4,60 +4,67 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Song Information</title>
-    <link rel="stylesheet" href="/styles.css">
-    <img src="/logo/03_13_2025_X-Design .png" alt="Playlist Organizer Logo" class="logo">
-
-
+    <link rel ="stylesheet" href ="./public/styles.css">
 </head>
 <body>
     <h1>Song Information</h1>
-
-    <fieldset>
-        <lable>Title:
-            <input type="text" name="title">
-        </lable>
-
-        <label>Artist:
-            <input type="text" name ="artist">
-        </label>
-    
-
-        <div  id ="options">
-            <select name ="genre" id="genre">
-                <option value="none">---Select a Genre---</option>
-                <option value="pop">Pop</option>
-                <option value="r&b">R&B</option>
-                <option value="lo-fi">Lo-fi</option>
-                <option value="rock">Rock</option>
-                <option value="edm">EDM</option>
-                <option value="blues">Blues</option>
-                <option value="country">Country</option>
-            </select>
+    <form action="thankyou" method="post" id="playlist-form">
 
 
-            <select name=" playlist" id="playlist">
-                <option value="none">---Select a Playlist---</option>
-                <option value="general">General</option>
-                <option value="workout">Workout</option>
-                <option value="study">Study</option>
-                <option value="happy">Happy</option>
-                <option value="sad">Sad</option>
-                <option value="romantic">Romantic</option>
-            </select>
-        </div>
+        <fieldset>
+            <label>Title:
+                <input type="text" name="title" id="title">
+                <span class="err" id="err-title">Title is required</span>
+            </label>
+
+            <label>Artist:
+                <input type="text" name ="artist" id="artist">
+                <span class="err" id="err-artist">Artist is required</span>
+            </label>
+        </fieldset>
+
+        <fieldset>
+            <label>Genre:
+                <select name ="genre" id="genre">
+                    <option value="none">---Select a Genre---</option>
+                    <option value="pop">Pop</option>
+                    <option value="r&b">R&B</option>
+                    <option value="lo-fi">Lo-fi</option>
+                    <option value="rock">Rock</option>
+                    <option value="edm">EDM</option>
+                    <option value="blues">Blues</option>
+                    <option value="country">Country</option>
+                </select>
+                <span class="err" id="err-genre">Genere is required</span>
+            </label>
+
+               <label>Playlist:
+                    <select name="playlist" id="playlist">
+                        <option value="none">---Select a Playlist---</option>
+                        <option value="general">General</option>
+                        <option value="workout">Workout</option>
+                        <option value="study">Study</option>
+                        <option value="happy">Happy</option>
+                        <option value="sad">Sad</option>
+                        <option value="romantic">Romantic</option>
+                    </select>
+                    <span class="err" id="err-playlist">Playlist is required</span>
+                </label>
+            </div>
+        
 
 
 
-    </fieldset>
+        </fieldset>
 
-      <!--  button for  -->
-    <button type="submit">Add Song</button>
+        <!--  button for  -->
+        <button type="submit">Add Song</button>
 
-    <a href="playlists" class="button-class">Show Playlists</a>
-
-
+    <a href="playlists.ejs" class="button-class">Show Playlists</a>
 
 
+
+    </form>
     
     
 </body>
