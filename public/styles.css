@@ -1,0 +1,117 @@
+/*  Global Styles */
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: #ffeef7;
+    color: #5a5a5a;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Header */
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+h1 {
+    color: #f1499d;
+    font-size: 2.5rem;
+    background: linear-gradient(to right, #ff99cc, #ffccff);
+    padding: 15px;
+    border-radius: 20px;
+    display: inline-block;
+    box-shadow: 0 4px 8px rgba(255, 105, 180, 0.3);
+}
+
+/*  Logo Styling */
+.logo {
+    width: 180px; /* Adjust size */
+    height: auto;
+    display: block;
+    margin-bottom: 10px;
+}
+
+/*  Form Container */
+fieldset {
+    background: #fff5fa;
+    border: 2px solid #ff99cc;
+    padding: 20px;
+    border-radius: 15px;
+    width: 60%;
+    margin: 20px auto;
+    box-shadow: 0 4px 8px rgba(255, 105, 180, 0.3);
+}
+
+/*  Labels & Inputs */
+label {
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+input, select {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: 2px solid #ff99cc;
+    font-size: 16px;
+    background: #fff0f6;
+    color: #5a5a5a;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+input:focus, select:focus {
+    border-color: #ff69b4;
+    background: #ffe5ec;
+}
+
+/* Error Messages */
+.err {
+    display: none;
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+/*  Buttons */
+button, .button-class {
+    background: linear-gradient(to right, #ff99cc, #ff66b2);
+    color: white;
+    padding: 12px 25px;
+    font-size: 18px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    display: inline-block;
+    margin: 20px 10px;
+    box-shadow: 0 4px 6px rgba(255, 105, 180, 0.3);
+    transition: transform 0.2s;
+}
+
+button:hover, .button-class:hover {
+    background: linear-gradient(to right, #ff66b2, #ff3385);
+    transform: scale(1.05);
+}
+
+/*  Playlist Layout */
+#options {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+/*  Responsive Design */
+@media (max-width: 768px) {
+    fieldset {
+        width: 80%;
+    }
+    #options {
+        flex-direction: column;
+    }
+}
