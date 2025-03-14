@@ -1,9 +1,9 @@
 export function validateForm(data){
 
-    //store all the validation errrors in an array
+    //store all the validation errors in an array
     const errors=[ ];
 
-    //validat title
+    //validate title
     if(!data.title || data.title.trim()=== ""){
         errors.push("Title is required");
     }
@@ -19,7 +19,7 @@ export function validateForm(data){
      }else{
         const validOptions = ["pop", "r&b", "lo-fi", "rock", "edm", "blues", "country"];
         if(!validOptions.includes(data.genre)){
-            errors.push("Invalid gener selection!");
+            errors.push("Invalid genre selection!");
         }
      }
     

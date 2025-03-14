@@ -16,19 +16,28 @@ document.getElementById('playlist-form').onsubmit = (event) => {
         isValid= false;
     }
 
+    // Allowed values for genre and playlist
+    const allowedGenres = ["pop", "r&b", "lo-fi", "rock", "edm", "blues", "country"];
+    const allowedPlaylists = ["general", "workout", "study", "happy", "sad", "romantic"];
+
+
     //validate genre
-    let genere = document.getElementById("genre").value;
-    if(genere === "none"){
-        document.getElementById("err-genre").style.display ="block";
+    let genre = document.getElementById("genre").value;
+    if (!allowedGenres.includes(genre)) {
+        document.getElementById("err-genre").style.display = "block";
         isValid = false;
+    } else {
+        document.getElementById("err-genre").style.display = "none";
     }
 
 
     //validate playlist
     let playlist = document.getElementById("playlist").value;
-    if(playlist === "none"){
-        document.getElementById("err-playlist").style.display ="block";
+    if (!allowedPlaylists.includes(playlist)) {
+        document.getElementById("err-playlist").style.display = "block";
         isValid = false;
+    } else {
+        document.getElementById("err-playlist").style.display = "none";
     }
 
     return isValid;
