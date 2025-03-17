@@ -1,0 +1,58 @@
+/* Thank You Page Styles */
+body {
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(to bottom right, #ffebf0, #ffd6e3);
+    color: #5a5a5a;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Page Title */
+h1 {
+    color: #ff69b4;
+    font-size: 2.5rem;
+    background: linear-gradient(to right, #ff99cc, #ffccff);
+    padding: 15px;
+    border-radius: 20px;
+    display: inline-block;
+    box-shadow: 0 4px 8px rgba(255, 105, 180, 0.3);
+    margin-bottom: 30px;
+}
+
+/* Buttons */
+button {
+    background: linear-gradient(to right, #ff99cc, #ff66b2);
+    color: white;
+    padding: 15px 25px;
+    font-size: 18px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    display: inline-block;
+    margin: 15px;
+    box-shadow: 0 4px 6px rgba(255, 105, 180, 0.3);
+    transition: transform 0.2s, background 0.3s;
+}
+
+button:hover {
+    background: linear-gradient(to right, #ff66b2, #ff3385);
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        padding: 20px;
+    }
+
+    button {
+        width: 90%;
+        max-width: 300px;
+    }
+}
