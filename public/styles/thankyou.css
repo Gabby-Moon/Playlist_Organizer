@@ -40,6 +40,8 @@ button {
     transition: transform 0.2s, background 0.3s;
 }
 
+
+
 button:hover {
     background: linear-gradient(to right, #ff66b2, #ff3385);
     transform: scale(1.05);

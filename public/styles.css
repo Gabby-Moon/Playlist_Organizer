@@ -103,6 +103,9 @@ button, .button-class {
     box-shadow: 0 4px 6px rgba(255, 105, 180, 0.3);
     transition: transform 0.2s;
 }
+.button-class {
+    text-decoration: none;
+}
 
 button:hover, .button-class:hover {
     background: linear-gradient(to right, #ff66b2, #ff3385);
