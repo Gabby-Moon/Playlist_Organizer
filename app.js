@@ -82,18 +82,35 @@ app.post('/thankyou', async(req,res)=>{
 });
 
 //Display playlists by fetching song from the database
-app.get('/playlists', async(req,res)=>{
-    const conn =await connect();
-    try{
+app.get('/playlists', async (req, res) => {
+    const conn = await connect();
+    try {
         const rows = await conn.query('SELECT * FROM songs');
-        res.render('playlist', { songs: rows });
-    }catch (err){
+
+       // Group songs by playlist while removing duplicates
+       const playlists = {};
+       rows.forEach(song => {
+           const playlist = song.playlist; 
+           if (!playlists[playlist]) {
+               playlists[playlist] = new Map(); // Use Map to ensure unique songs
+           }
+           const uniqueKey = `${song.title}-${song.artist}`; 
+           if (!playlists[playlist].has(uniqueKey)) {
+               playlists[playlist].set(uniqueKey, song);
+           }
+       });
+
+       // Convert Maps to arrays for rendering
+       Object.keys(playlists).forEach(playlist => {
+           playlists[playlist] = Array.from(playlists[playlist].values());
+       });
+        res.render('playlist', { playlists }); 
+    } catch (err) {
         console.error(`Error fetching songs: ${err}`);
         res.status(500).send(`Error fetching songs from the database`);
-
     }
-   
 });
+
 
 //Admin route
 app.get('/admin', async (req,res)=>{
