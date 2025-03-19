@@ -91,8 +91,6 @@ app.get('/playlists', async(req,res)=>{
         console.error(`Error fetching songs: ${err}`);
         res.status(500).send(`Error fetching songs from the database`);
 
-    }finally{
-        conn.end();
     }
    
 });
