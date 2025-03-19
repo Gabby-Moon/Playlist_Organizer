@@ -1,6 +1,6 @@
 /*  Global Styles */
 body {
-    font-family: "Poppins", sans-serif;
+    font-family: "Papyrus", fantasy;
     background-color: #ffeef7;
     color: #5a5a5a;
     margin: 0;
@@ -18,7 +18,7 @@ header {
 
 h1 {
     color: #f1499d;
-    font-size: 2.5rem;
+    font-size: 40px;
     background: linear-gradient(to right, #ff99cc, #ffccff);
     padding: 15px;
     border-radius: 20px;
@@ -48,7 +48,7 @@ fieldset {
 /*  Labels & Inputs */
 label {
     display: block;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: bold;
     text-align: left;
     margin-bottom: 10px;
@@ -56,7 +56,7 @@ label {
 
 input, select {
     width: 100%;
-    padding: 12px;
+    padding: 5px;
     border-radius: 10px;
     border: 2px solid #ff99cc;
     font-size: 16px;
@@ -70,6 +70,15 @@ input:focus, select:focus {
     border-color: #ff69b4;
     background: #ffe5ec;
 }
+fieldset:last-of-type {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+fieldset:last-of-type label {
+    width: 48%;
+}
 
 /* Error Messages */
 .err {
@@ -81,6 +90,7 @@ input:focus, select:focus {
 
 /*  Buttons */
 button, .button-class {
+    font-family: "Papyrus", fantasy;
     background: linear-gradient(to right, #ff99cc, #ff66b2);
     color: white;
     padding: 12px 25px;
@@ -92,6 +102,9 @@ button, .button-class {
     margin: 20px 10px;
     box-shadow: 0 4px 6px rgba(255, 105, 180, 0.3);
     transition: transform 0.2s;
+}
+.button-class {
+    text-decoration: none;
 }
 
 button:hover, .button-class:hover {
@@ -115,3 +128,4 @@ button:hover, .button-class:hover {
         flex-direction: column;
     }
 }
+
