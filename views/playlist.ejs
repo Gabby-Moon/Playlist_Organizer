@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/playlist-styles.css">
+    <title>All Playlists</title>
+    <script src="/scripts/button-functions.js" defer></script>
+</head>
+<body>
+
+    <h1>Playlists by Genre</h1>
+
+    <% if (songs.length > 0) { %>
+        <% 
+            // Group songs by genre
+            const genres = {};
+            songs.forEach(song => {
+                if (!genres[song.genre]) {
+                    genres[song.genre] = [];
+                }
+                genres[song.genre].push(song);
+            });
+        %>
+
+        <% Object.keys(genres).forEach(genre => { %>
+            <section class="playlist-section">
+                <h2><%= genre %> Playlist</h2>
+                <ul>
+                    <% genres[genre].forEach(song => { %>
+                        <li>
+                            <strong><%= song.title %></strong> by <%= song.artist %> 
+                            (Playlist: <%= song.playlist %>)
+                        </li>
+                    <% }); %>
+                </ul>
+            </section>
+        <% }); %>
+
+    <% } else { %>
+        <p>No songs found in playlists.</p>
+    <% } %>
+
+    <button type="button" id="add-another" onclick="window.location.href='/'">Add Another Song</button>
+
+</body>
+</html>
