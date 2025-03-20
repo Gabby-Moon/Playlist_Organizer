@@ -86,6 +86,7 @@ fieldset:last-of-type label {
 /* Error Messages */
 .err {
     display: none;
+    font-family: "Arial Narrow", Arial, sans-serif;
     color: red;
     font-size: 14px;
     margin-top: 5px;
