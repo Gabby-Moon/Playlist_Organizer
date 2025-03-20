@@ -1,6 +1,6 @@
 /* Thank You Page Styles */
 body {
-    font-family: "Poppins", sans-serif;
+ font-family: "Comic Sans MS", "Comic Sans", cursive;
     background: linear-gradient(to bottom right, #ffebf0, #ffd6e3);
     color: #5a5a5a;
     margin: 0;
@@ -15,7 +15,7 @@ body {
 
 /* Page Title */
 h1 {
-    color: #ff69b4;
+    color: #e3398e;
     font-size: 2.5rem;
     background: linear-gradient(to right, #ff99cc, #ffccff);
     padding: 15px;
@@ -28,6 +28,7 @@ h1 {
 /* Buttons */
 button {
     background: linear-gradient(to right, #ff99cc, #ff66b2);
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
     color: white;
     padding: 15px 25px;
     font-size: 18px;
