@@ -15,24 +15,37 @@
     <h1>My Playlists</h1>
 
     <div class="playlist-container">
-        <% Object.keys(playlists).forEach(playlist => { %>
-            <div class="playlist-box">
-                <h2><%= playlist.charAt(0).toUpperCase() + playlist.slice(1) %> Playlist</h2>
-                <ul>
-                    <% playlists[playlist].forEach(song => { %>
-                        <li>
-                            <strong><%= song.title %></strong> by <%= song.artist %> 
-                            (Genre: <%= song.genre %>)
-                        </li>
-                    <% }); %>
-                </ul>
-            </div>
-        <% }); %>
+        <% if (Object.keys(playlists).length > 0) { %>
+            <% Object.keys(playlists).forEach(playlist => { %>
+                <div class="playlist-box">
+                    <h2><%= playlist %> Playlist</h2>
+                    <form action="/delete/playlist/<%= playlist %>" method="POST">
+                        <button type="submit" onclick="return confirm('Delete this entire playlist?')">
+                            🗑️ Delete Playlist
+                        </button>
+                    </form>
+                    <ul>
+                        <% playlists[playlist].forEach(song => { %>
+                            <li>
+                                <span><%= song.title %> - <%= song.artist %></span>
+                                <form class="delete-form" action="/delete/song/<%= song.id %>" method="POST">
+                                    <button class="delete-button">X</button>
+                                </form>
+                            </li>
+                        <% }) %>
+                    </ul>
+                    
+                </div>
+            <% }); %>
+        <% } else { %>
+            <p>No playlists available.</p>
+        <% } %>
     </div>
-
+    
     <div class="buttons">
         <button onclick="window.location.href='/'">Add Another Song</button>
     </div>
+    
 
 </body>
 </html>

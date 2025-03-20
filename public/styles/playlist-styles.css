@@ -87,6 +87,40 @@ button:hover {
     transform: scale(1.05);
 }
 
+/* Delete button styles */
+.delete-form {
+    display: inline;
+    margin-left: 10px;
+}
+
+.delete-button {
+    background: #ff4d4d; /* Red for delete action */
+    color: white;
+    padding: 5px 10px; /* Smaller padding */
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.delete-button:hover {
+    background: #cc0000; /* Darker red on hover */
+}
+
+/* Adjust list items to align text and button */
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 10px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 5px;
+}
+
+
 /*  Responsive Design */
 @media (max-width: 768px) {
     body {
